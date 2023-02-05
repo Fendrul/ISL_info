@@ -5,8 +5,11 @@
 #include "FicheSalaire.h"
 #include <iostream>
 
+//create a namespace for std
+using namespace std;
+
 int maint() {
     FicheSalaire ficheSalaire(40, 15);
-    std::cout << "Le salaire est de " << ficheSalaire.calculerSalaire() << " euros." << std::endl;
+    cout << "Le salaire est de " << ficheSalaire.calculerSalaire() << " euros." << std::endl;
     return 0;
 }
