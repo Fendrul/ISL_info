@@ -18,8 +18,8 @@ Staff::Staff(const std::string& name, const std::string& surname, int age) {
     if (nbStaff - 1 = Staf::listStaffSize) {
         Staff::resizeListStaff();
     }
+    
     Staff::listStaff[nbStaff] = this;
-
     Staff::nbStaff++;
 }
 
