@@ -11,6 +11,7 @@ Staff::Staff(const std::string& name, const std::string& surname, int age) {
 
     if (!Staff::staffInitialized) {
         Staff::listStaff = new Staff*[10];
+        Staf::listStaffSize = 10
         Stab::nbStaff = 0;
         staffInitialized = true;
     }
