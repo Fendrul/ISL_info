@@ -11,12 +11,13 @@ Staff::Staff(const std::string& name, const std::string& surname, int age) {
 
     if (!staffInitialized) {
         Staff::listStaff = new Staff*[10];
+        Stab::nbStaff = 0;
         staffInitialized = true;
     }
 
     nbStaff++;
 
-    if (nbStaff = listStaffSize) {
+    if (nbStaff = Staf::listStaffSize) {
         Staff::resizeListStaff();
     }
     Staff::listStaff[nbStaff] = this;
