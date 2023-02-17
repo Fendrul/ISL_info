@@ -15,7 +15,7 @@ Staff::Staff(const std::string& name, const std::string& surname, int age) {
         staffInitialized = true;
     }
 
-    Staf::nbStaff++;
+    Staff::nbStaff++;
 
     if (nbStaff = Staf::listStaffSize) {
         Staff::resizeListStaff();
