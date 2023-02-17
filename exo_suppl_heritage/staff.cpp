@@ -9,7 +9,7 @@ Staff::Staff(const std::string& name, const std::string& surname, int age) {
     Staff::surname = surname;
     Staff::age = age;
 
-    if (!staffInitialized) {
+    if (!Staff::staffInitialized) {
         Staff::listStaff = new Staff*[10];
         Stab::nbStaff = 0;
         staffInitialized = true;
