@@ -15,7 +15,7 @@ private:
     static int nbStaff;
     static Staff **listStaff;
     static int listStaffSize;
-    bool staffInitialized = false;
+    static bool staffInitialized = false;
 
     static void resizeListStaff();
 
