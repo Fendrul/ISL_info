@@ -20,7 +20,7 @@ private:
     static void resizeListStaff();
 
 public:
-    Staff(const std::string name, const std::string surname, int age);
+    Staff(const std::string& name, const std::string& surname, int age);
 
     const std::string &getName() const;
     void setName(const std::string &name);

@@ -5,7 +5,7 @@
 #include "Employee.h"
 
 //undefined reference to `Staff::Staff(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int)'
-Employee::Employee(const std::string name, const std::string surname, int age, int salary, int numberHoursWorked)
+Employee::Employee(const std::string& name, const std::string& surname, int age, int salary, int numberHoursWorked)
         : Staff(name, surname, age) {
     Employee::salary = salary;
     Employee::numberHoursWorked = numberHoursWorked;

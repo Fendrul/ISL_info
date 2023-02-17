@@ -14,7 +14,7 @@ class Commercial : public Staff {
     int sales;
 
 public:
-    Commercial(const std::string &name, const std::string &surname, int age, int fixedSalary, int commission, int sales);
+    Commercial(const std::string name, const std::string surname, int age, int fixedSalary, int commission, int sales);
     ~Commercial();
 
     int getFixedSalary() const;

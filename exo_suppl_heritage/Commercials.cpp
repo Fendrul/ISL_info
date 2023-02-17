@@ -4,39 +4,39 @@
 
 #include "Commercial.h"
 
-Commercials::Commercials(const std::string &name, const std::string &surname, int age, int fixedSalary, int commission, int sales)
+Commercial::Commercial(const std::string name, const std::string surname, int age, int fixedSalary, int commission, int sales)
             : Staff(name, surname, age) {
-    Commercials::fixedSalary = fixedSalary;
-    Commercials::commission = commission;
-    Commercials::sales = sales;
+    Commercial::fixedSalary = fixedSalary;
+    Commercial::commission = commission;
+    Commercial::sales = sales;
 }
 
-Commercials::~Commercials() = default;
+Commercial::~Commercial() = default;
 
-int Commercials::getFixedSalary() const {
+int Commercial::getFixedSalary() const {
     return fixedSalary;
 }
 
-void Commercials::setFixedSalary(int fixedSalary) {
-    Commercials::fixedSalary = fixedSalary;
+void Commercial::setFixedSalary(int fixedSalary) {
+    Commercial::fixedSalary = fixedSalary;
 }
 
-int Commercials::getCommission() const {
+int Commercial::getCommission() const {
     return commission;
 }
 
-void Commercials::setCommission(int commission) {
-    Commercials::commission = commission;
+void Commercial::setCommission(int commission) {
+    Commercial::commission = commission;
 }
 
-int Commercials::getSales() const {
+int Commercial::getSales() const {
     return sales;
 }
 
-void Commercials::setSales(int sales) {
-    Commercials::sales = sales;
+void Commercial::setSales(int sales) {
+    Commercial::sales = sales;
 }
 
-int Commercials::calculateSalary() {
+int Commercial::calculateSalary() {
     return fixedSalary + (commission * sales);
 }

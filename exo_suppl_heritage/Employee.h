@@ -16,7 +16,7 @@ private:
     int numberHoursWorked;
 
 public:
-    Employee(const std::string name, const std::string surname, int age, int salary, int numberHoursWorked);
+    Employee(const std::string& name, const std::string& surname, int age, int salary, int numberHoursWorked);
 
     int getSalary() const;
     void setSalary(int salary);

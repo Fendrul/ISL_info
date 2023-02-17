@@ -4,7 +4,7 @@
 
 #include "Staff.h"
 
-Staff::Staff(const std::string name, const std::string surname, int age) {
+Staff::Staff(const std::string& name, const std::string& surname, int age) {
     Staff::name = name;
     Staff::surname = surname;
     Staff::age = age;
