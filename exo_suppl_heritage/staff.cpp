@@ -29,6 +29,7 @@ void Staff::resizeListStaff() {
         newListStaff[i] = Staff::getListStaff()[i];
     }
     Staff::setListStaff(newListStaff);
+    Staf::listStaffSize += 10;
 }
 
 const std::string &Staff::getName() const {
