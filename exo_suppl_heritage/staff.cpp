@@ -15,18 +15,17 @@ Staff::Staff(const std::string& name, const std::string& surname, int age) {
         staffInitialized = true;
     }
 
-    Staff::nbStaff++;
-
-    if (nbStaff = Staf::listStaffSize) {
+    if (nbStaff - 1 = Staf::listStaffSize) {
         Staff::resizeListStaff();
     }
     Staff::listStaff[nbStaff] = this;
 
+    Staff::nbStaff++;
 }
 
 void Staff::resizeListStaff() {
     Staff *newListStaff[Staff::getNbStaff() + 10];
-    for (int i = 0; i < Staff::getNbStaff(); i++) {
+    for (int i = 0; i < Staff::getNbStaff() - 1; i++) {
         newListStaff[i] = Staff::getListStaff()[i];
     }
     Staff::setListStaff(newListStaff);
