@@ -10,7 +10,6 @@
 using namespace std;
 
 int startHeritageExe() {
-    Staff::setNbStaff(0);
 
     Employee *employee1 = new Employee("Simon", "Bouvier", 20, 1000, 40);
     Employee *employee2 = new Employee("Rachelle", "Doutier", 20, 1200, 35);
