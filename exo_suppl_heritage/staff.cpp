@@ -4,19 +4,42 @@
 
 #include "Staff.h"
 
-Staff::Staff(const std::string& name, const std::string& surname, int age){
-    //Call the constructor of the super class inside this constructor
+int Staff::nbStaff = 0;
+Staff **Staff::listStaff = nullptr;
+int Staff::listStaffSize = 0;
+bool Staff::staffInitialized = false;
 
+Staff::Staff(const std::string& name, const std::string& surname, int age) {
     Staff::name = name;
     Staff::surname = surname;
     Staff::age = age;
 
-    if (Staff::getNbStaff() - 1 == Staff::getListStaffSize()) {
+    if (!Staff::staffInitialized) {
+        Staff::listStaff = new Staff*[10];
+        Staff::listStaffSize = 10;
+        Staff::nbStaff = 0;
+        staffInitialized = true;
+    }
+
+    if (Staff::nbStaff - 1 == Staff::listStaffSize) {
         Staff::resizeListStaff();
     }
     
-    Staff::getListStaff()[Staff::getNbStaff()] = this;
-    Staff::setNbStaff(Staff::getNbStaff() + 1);
+    Staff::listStaff[nbStaff] = this;
+    Staff::nbStaff++;
+}
+
+Staff::~Staff() {
+    Staff::nbStaff--;
+}
+
+void Staff::resizeListStaff() {
+    Staff *newListStaff[Staff::getNbStaff() + 10];
+    for (int i = 0; i < Staff::getNbStaff() - 1; i++) {
+        newListStaff[i] = Staff::getListStaff()[i];
+    }
+    Staff::setListStaff(newListStaff);
+    Staff::listStaffSize += 10;
 }
 
 const std::string &Staff::getName() const {
@@ -41,6 +64,22 @@ int Staff::getAge() const {
 
 void Staff::setAge(int age) {
     Staff::age = age;
+}
+
+Staff **Staff::getListStaff() {
+    return listStaff;
+}
+
+void Staff::setListStaff(Staff **listStaff) {
+    Staff::listStaff = listStaff;
+}
+
+int Staff::getNbStaff() {
+    return nbStaff;
+}
+
+void Staff::setNbStaff(int nbStaff) {
+    Staff::nbStaff = nbStaff;
 }
 
 int Staff::calculateAllStaffSalary() {

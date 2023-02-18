@@ -6,16 +6,22 @@
 #define UNTITLED1_STAFF_H
 
 #include <string>
-#include "StaffStatic.h"
 
-class Staff : public StaffStatic<Staff> {
+class Staff {
 private:
     std::string name;
     std::string surname;
     int age;
+    static int nbStaff;
+    static Staff **listStaff;
+    static int listStaffSize;
+    static bool staffInitialized;
+
+    static void resizeListStaff();
 
 public:
     Staff(const std::string& name, const std::string& surname, int age);
+    virtual ~Staff();
 
     const std::string &getName() const;
     void setName(const std::string &name);
@@ -23,6 +29,12 @@ public:
     void setSurname(const std::string &surname);
     int getAge() const;
     void setAge(int age);
+
+    static Staff **getListStaff();
+    static void setListStaff(Staff **listStaff);
+
+    static int getNbStaff();
+    static void setNbStaff(int nbStaff);
 
     virtual int calculateSalary();
     static int calculateAllStaffSalary();
