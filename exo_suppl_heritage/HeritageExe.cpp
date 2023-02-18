@@ -32,7 +32,7 @@ int startHeritageExe() {
     Commercial *commercial1 = new Commercial("Daniyal", "Yunusau", 26, 1250, 20, 80);
     Commercial *commercial2 = new Commercial("Charlotte", "Meyer", 27, 1500, 30, 60);
 
-    cout << "Le salaire total de tous les employé est " << Staff::calculateAllStaffSalary() << endl;
+    cout << "Le salaire total de tous les employés est " << Staff::calculateAllStaffSalary() << endl;
 
     return 0;
 }
