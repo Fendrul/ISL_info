@@ -8,4 +8,4 @@ set(CMAKE_CXX_STANDARD 23)
 #undefined reference to `Staff::listStaff'
 #undefined reference to `vtable for Staff'
 
-add_executable(untitled1 main.cpp "exo_suppl_heritage/Manager.h" "exo_suppl_heritage/Manager.cpp" "exo_suppl_heritage/Employee.cpp" "exo_suppl_heritage/staff.cpp" exo_suppl_heritage/Commercials.cpp exo_suppl_heritage/StaffStatic.h exo_suppl_heritage/StaffStatic.cpp)
+add_executable(untitled1 main.cpp "exo_suppl_heritage/Manager.h" "exo_suppl_heritage/Manager.cpp" "exo_suppl_heritage/Employee.cpp" "exo_suppl_heritage/staff.cpp" exo_suppl_heritage/Commercials.cpp)
