@@ -11,11 +11,11 @@ using namespace std;
 
 int startHeritageExe() {
 
-    auto *employee1 = new Employee("Simon", "Bouvier", 20, 1000, 40);
-    auto *employee2 = new Employee("Rachelle", "Doutier", 20, 1200, 35);
-    auto *employee3 = new Employee("Paul", "Ravier", 20, 850, 62);
-    auto *manager1 = new Manager("Jean", "Dupont", 20, 1500, 30);
-    auto *manager2 = new Manager("Pierre", "Boulard", 20, 2000, 70);
+    auto *employee1 = new Employee("Simon", "Bouvier", 20, 11, 40);
+    auto *employee2 = new Employee("Rachelle", "Doutier", 20, 12, 35);
+    auto *employee3 = new Employee("Paul", "Ravier", 20, 9, 62);
+    auto *manager1 = new Manager("Jean", "Dupont", 20, 17, 30);
+    auto *manager2 = new Manager("Pierre", "Boulard", 20, 23, 70);
 
     manager1->addSubordinate(employee1);
     manager1->addSubordinate(employee2);
@@ -31,8 +31,9 @@ int startHeritageExe() {
 
     auto *commercial1 = new Commercial("Daniyal", "Yunusau", 26, 1250, 20, 80);
     auto *commercial2 = new Commercial("Charlotte", "Meyer", 27, 1500, 30, 60);
+    auto *commercial3 = new Commercial("Charlotte", "Meyer", 27, 100, 30, 0);
 
-    cout << "Le salaire total de tous les employés est " << Staff::calculateAllStaffSalary() << endl;
+    cout << "Le salaire total de tous les employés est de " << Staff::calculateAllStaffSalary() << endl;
 
     return 0;
 }
