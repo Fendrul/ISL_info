@@ -32,10 +32,10 @@ int Employee::calculateSalary() {
 }
 
 void Employee::show() const {
-//    std::cout << "Name: " << getName() << std::endl;
-//    std::cout << "Surname: " << getSurname() << std::endl;
-//    std::cout << "Age: " << getAge() << std::endl;
-//    std::cout << "Salary: " << salary << std::endl;
-//    std::cout << "Number of hours worked: " << numberHoursWorked << std::endl;
-//    std::cout << "\n" << std::endl;
+    std::cout << "Name: " << getName() << std::endl;
+    std::cout << "Surname: " << getSurname() << std::endl;
+    std::cout << "Age: " << getAge() << std::endl;
+    std::cout << "Salary: " << salary << std::endl;
+    std::cout << "Number of hours worked: " << numberHoursWorked << std::endl;
+    std::cout << "\n" << std::endl;
 }

@@ -36,7 +36,7 @@ public:
     static int getNbStaff();
     static void setNbStaff(int nbStaff);
 
-    virtual int calculateSalary();
+    virtual int calculateSalary() = 0;
     static int calculateAllStaffSalary();
 };
 
